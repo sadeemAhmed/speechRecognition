@@ -39,7 +39,7 @@ stopRecordBtn.addEventListener('click', () => {
 
 function saveToDatabase(text) {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../PHP/get_texts.php', true); // Update path if necessary
+    xhr.open('POST', '../PHP/save_text.php', true); // Path to save_text.php
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
