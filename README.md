@@ -118,6 +118,8 @@ speech-recognition/
 ##  Speech Recognition Program Video 🎥
 https://github.com/user-attachments/assets/0e896ada-e288-40fb-b17f-9e3b1fc5d035
 
+Note: I wanted to add more to the video, but GitHub only allows video files up to 10 MB.🥲
+
 Made with love by the "she codes team" 🤍😄
 
 
