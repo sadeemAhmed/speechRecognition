@@ -113,7 +113,11 @@ speech-recognition/
 - **Speech Recognition**: Convert spoken words to text using the web interface.
 - **Save Transcribed Text**: Automatically save the transcribed text to a MySQL database.
 - **User-Friendly Interface**: Easy-to-use buttons to start and stop recording, with visual feedback.
-- **Real-Time Display**: View the transcribed text in real-time as you speak.
+- **Real-Time Display**: Vie
+
+https://github.com/user-attachments/assets/0e896ada-e288-40fb-b17f-9e3b1fc5d035
+
+w the transcribed text in real-time as you speak.
 
 Made with love by the "she codes team" 🤍😄
 
