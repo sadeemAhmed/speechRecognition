@@ -56,3 +56,25 @@ function saveToDatabase(text) {
     };
     xhr.send('text=' + encodeURIComponent(text));
 }
+function saveToDatabase(text) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '../PHP/save_text.php', true); // Update path if necessary
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log('Status: ' + xhr.status);
+            console.log('Response: ' + xhr.responseText);
+            if (xhr.status === 200) {
+                console.log('Text saved to database');
+            } else {
+                console.error('Error: ', xhr.statusText);
+            }
+        }
+    };
+    console.log('Sending text: ' + text); // Log the text being sent
+    xhr.send('text=' + encodeURIComponent(text));
+}
+
+
+
+
