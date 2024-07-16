@@ -1,6 +1,5 @@
 # TASK3: Speech Recognition
 
-This project is a web-based speech-to-text converter. It allows users to convert spoken words into text, which is then saved to a database for further processing. The project focuses on providing a user-friendly interface for recording speech and viewing the transcribed text.
 
 ## Table of Contents ⚙️
 - [Project Description](#project-description)
