@@ -30,9 +30,7 @@ if ('webkitSpeechRecognition' in window) {
         status.textContent = 'Error occurred in recognition: ' + event.error;
     };
 
-    recognition.onend = function() {
-        status.textContent = 'Voice recognition ended.';
-    };
+    
 }
 
 startRecordBtn.addEventListener('click', () => {
