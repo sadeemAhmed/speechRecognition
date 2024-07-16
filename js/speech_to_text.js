@@ -10,9 +10,7 @@ if ('webkitSpeechRecognition' in window) {
     recognition.continuous = true;
     recognition.interimResults = true;
 
-    recognition.onstart = function() {
-        status.textContent = 'Voice recognition started. Try speaking into the microphone.';
-    };
+    
 
     recognition.onresult = function(event) {
         let interimTranscript = '';
