@@ -10,8 +10,6 @@ if ('webkitSpeechRecognition' in window) {
     recognition.continuous = true;
     recognition.interimResults = true;
 
-    
-
     recognition.onresult = function(event) {
         let interimTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
@@ -29,8 +27,6 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onerror = function(event) {
         status.textContent = 'Error occurred in recognition: ' + event.error;
     };
-
-    
 }
 
 startRecordBtn.addEventListener('click', () => {
@@ -43,18 +39,7 @@ stopRecordBtn.addEventListener('click', () => {
 
 function saveToDatabase(text) {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../PHP/save_text.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log('Text saved to database');
-        }
-    };
-    xhr.send('text=' + encodeURIComponent(text));
-}
-function saveToDatabase(text) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../PHP/save_text.php', true); // Update path if necessary
+    xhr.open('POST', '../PHP/get_texts.php', true); // Update path if necessary
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
@@ -70,7 +55,3 @@ function saveToDatabase(text) {
     console.log('Sending text: ' + text); // Log the text being sent
     xhr.send('text=' + encodeURIComponent(text));
 }
-
-
-
-
