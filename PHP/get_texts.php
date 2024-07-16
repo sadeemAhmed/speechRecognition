@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "robot_control";
+$dbname = "record";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,8 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve the last command
-$sql = "SELECT command FROM commands ORDER BY id DESC LIMIT 1";
+// Retrieve the last transcribed text
+$sql = "SELECT text FROM speech_texts ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result === false) {
@@ -23,9 +23,9 @@ if ($result === false) {
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    echo $row['command'];
+    echo $row['text'];
 } else {
-    echo "No commands found";
+    echo "No text found";
 }
 
 // Close the connection
