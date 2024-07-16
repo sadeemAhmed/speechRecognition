@@ -116,4 +116,6 @@ speech-recognition/
 - **Real-Time Display**: View the transcribed text in real-time as you speak.
 
 Made with love by the "she codes team" 🤍😄
+
+
 raghd Alshammari - sadeem alresaini - razan alothaim.
