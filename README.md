@@ -15,7 +15,7 @@
 - [Features](#features)
 
 ## Project Description 📝
-
+The Speech Recognition project provides a simple and intuitive web interface for converting speech to text. The interface includes buttons to start and stop recording, and a text area to display the transcribed text. The transcribed text is saved to a MySQL database for logging and further actions.
 
 ## Technologies Used 🔧
 
